@@ -4,8 +4,9 @@ import { ITodo } from '../interfaces/todos'
 import { todos } from '../database/todo'
 
 export default function handler(
-  _req: NextApiRequest,
-  res: NextApiResponse<ITodo[]>
+    req: NextApiRequest,
+    res: NextApiResponse<ITodo[]>
 ) {
-  res.status(200).json(todos);
+    todos.push(req.body.todo);
+    res.status(200).json(todos);
 }

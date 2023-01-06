@@ -4,5 +4,5 @@ export interface ITodo {
     description: string;
     createdAt: Date;
     updatedAt?: Date;
-    state: "validate" | "in-progess" | "blocked" | "invalidate";
+    state: "validate" | "in-progess" | "blocked" | "todo";
 }

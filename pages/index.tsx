@@ -13,6 +13,25 @@ export default function Home() {
     setLoading(false);
   };
 
+  const addOneTodo = async () => {
+    const todo: ITodo = {
+      _id: (todos.length + 1).toString(),
+      label: 'Added Todo',
+      description: 'The todo was added by clicking the button',
+      createdAt: new Date(),
+      state: 'todo'
+    }
+    await fetch("/api/add", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({todo})
+    });
+    setLoading(true);
+    loadTodos();
+  }
+
   useEffect(() => {
     (async () => {
       setLoading(true);
@@ -30,7 +49,7 @@ export default function Home() {
               todos.map(todo => {
                 return (
                   <div className={"todo"}>
-                    <h2>{todo.label}</h2>
+                    <h2>{todo.label}: {todo._id}</h2>
                     <p>{todo.description}</p>
                     <p>{todo.createdAt.toString()}</p>
                     <p>Status: {todo.state}</p>
@@ -40,7 +59,7 @@ export default function Home() {
           </div>
       }
       <div className={"container row width-30"}>
-        <button>Ajouter une todo</button>
+        <button onClick={addOneTodo}>Ajouter une todo</button>
       </div>
     </div>
   )
