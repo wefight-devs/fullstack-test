@@ -1,17 +1,17 @@
-Le repositorie de todo est écrit en nextJS.
-Tu trouveras une partie front et une partie API.
+# TODOS-API
 
-Tes objectifs :
+The repository of "todos" is written in [next.js](https://nextjs.org/) 
 
-Le code a été fait par un junior, il est important d'avoir une code base seine pour faciliter la prise en main du repo pour les prochains développeur.
+## Your goals:
 
-Fonctionnellement, tu dois ajouter :
+Mainly... The code was made by a junior, it is important to have a clean code base.
 
-1 - Ajouter la fonction "remove" un todo
-2 - Ajouter la fonction "update" un todo
-3 - Ajouter la fonction "create" un todo
+## You have to add :
+- Add the function "remove" a todo
+- Add the function "update" a todo
+- Add the function "create" a todo
 
-Bonus :
+### Bonus:
 
-- Ajouter un système de filtre sur les "state"
-- Faire une belle mise en page
+- Add a filter system on the "state".
+- Make a nice layout
