@@ -19,7 +19,8 @@ export default function Home() {
       label: 'Added Todo',
       description: 'The todo was added by clicking the button',
       createdAt: new Date(),
-      state: 'todo'
+      state: 'todo',
+      updatedAt: undefined
     }
     await fetch("/api/add", {
       method: 'POST',
@@ -35,9 +36,8 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      loadTodos();
     })()
-  }, [])
+  })
 
   if (!todos) return "Loading...";
   return (

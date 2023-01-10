@@ -5,12 +5,14 @@ export const todos: ITodo[] = [{
     label: "Update one Todo",
     description: "I have to create a system that permit to update the todo",
     createdAt: new Date(),
-    state: "in-progess"
+    state: "in-progess",
+    updatedAt: undefined,
 },
 {
     _id: "2",
     label: "Remove one Todo",
     description: "I have to create a system that permit to remove one todo",
     createdAt: new Date(),
-    state: "todo"
+    state: "todo",
+    updatedAt: undefined,
 }];
