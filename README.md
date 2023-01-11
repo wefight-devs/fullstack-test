@@ -1,4 +1,4 @@
-# TODOS-API
+# TODOS-APLICATION
 
 The repository of "todos" is written in [next.js](https://nextjs.org/) 
 
